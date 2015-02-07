@@ -1,0 +1,25 @@
+# Eléments à ignorer
+
+## Fichiers à ignorer partout
+*~
+
+## Structure Concrete 5 à la racine
+/*
+/*/
+
+# Éléments à conserver
+
+# Configuration Concrete 5.6
+!/config/
+
+## Pages modifiées Concrete 5.6
+!/single_pages/
+
+## Thèmes Concrete 5.6
+!/themes/
+
+## Les autres fichiers gitignore
+!.gitignore
+
+## README
+!README.md

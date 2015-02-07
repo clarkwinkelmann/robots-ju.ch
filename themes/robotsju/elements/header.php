@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<?php 
+		Loader::element('header_required');
+	?>
+	
+	<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="<?php echo $this->getThemePath()?>/css/style.css">
+</head>
+<body>
+	<!--[if lte IE 8]>
+	<div id="ienotice">Votre version d'Internet Explorer est obsolète. Mettez votre navigateur à jour pour bénéficier d'un affichage correct de ce site.<br>
+	Consultez <a href="http://browsehappy.com/?locale=fr" target="_blank">BrowseHappy.com</a> pour plus d'informations sur les navigateurs internet</div>
+	<![endif]-->
+	<div id="container">
+		<div id="header">
+			<div id="header-banner">
+				<div class="logo">
+					<?php
+						$ah = new GlobalArea('Logo');
+						$ah->display($c);
+					?>
+				</div>
+				<div class="motto">
+					<?php
+						$ah = new GlobalArea('Motto');
+						$ah->display($c);
+					?>
+				</div>
+				<div class="inlay"></div>
+				<div class="login">
+					<?php
+						$ah = new GlobalArea('Login Box');
+						$ah->display($c);
+					?>
+				</div>
+			</div>
+			<div id="header-menu">
+				<?php
+					$ah = new GlobalArea('Header Nav');
+					$ah->display($c);
+				?>
+			</div>
+			<?php $u = new User();
+			if ($u->isRegistered()) { ?>
+			<div id="header-user-menu">
+				<?php
+					$ah = new GlobalArea('Header User Nav');
+					$ah->display($c);
+				?>
+			</div>
+			<?php } ?>
+		</div>

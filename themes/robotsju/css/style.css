@@ -1,0 +1,496 @@
+/*
+	Style Robots-JU
+	Clark Winkelmann
+*/
+
+#container *{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	color: #333;
+	background: #E8E8E8;
+}
+
+#container{
+	width: 1200px;
+	margin: 0 auto;
+	background: #FFF;
+	box-shadow: 0 0 2px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+}
+
+#header{
+	
+}
+
+#header-banner{
+	padding: 20px;
+	overflow: hidden;
+	background: url(../img/headerinlay.png) no-repeat 55% bottom;
+}
+
+#header-banner .logo{
+	float: left;
+	margin-top: 20px;
+}
+
+#header-banner .motto{
+	float: left;
+	color: #AAA;
+	margin-left: 10px;
+	margin-top: 50px;
+	font-size: 1.2em;
+}
+
+#header-banner .motto div{
+	display: inline;
+}
+
+#header-banner .motto::before{
+	content: '... ';
+}
+
+#header-banner .login{
+	float: right;
+}
+
+#header-banner .login br{
+	display: none;
+}
+
+#header-banner .login .loginTxt{
+	display: none;
+}
+
+#header-banner .login .uNameWrap,
+#header-banner .login .passwordWrap,
+#header-banner .login .loginButton{
+	display: inline-block;
+	vertical-align: bottom;
+	margin: 0;
+}
+
+#header-banner .login label{
+	display: block;
+	font-size: 0.9em;
+	color: #AAA;
+}
+
+#header-banner .login input[type=text],
+#header-banner .login input[type=password]{
+	width: 12em;
+}
+#header-banner .login input[type=submit],
+#header-banner .login a{
+	text-decoration: none;
+	padding: 0.4em 0.6em;
+	background: #DDD;
+	color: #333;
+	cursor: pointer;
+	border: none;
+}
+
+#header-banner .login b a{
+	background: none;
+	padding: 0;
+	color: #1F9600;
+	font-size: 1.2em;
+	border-bottom: 2px dotted;
+}
+
+#header-banner .login b a:hover{
+	color: #666;
+}
+
+#header-menu{
+	border-top: 2px solid #EEE;
+	border-bottom: 2px solid #EEE;
+	padding: 0 20px;
+}
+
+#header-menu ul,
+#header-user-menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#header-menu ul > li,
+#header-user-menu ul > li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+}
+
+#header-menu ul > li > a,
+#header-user-menu ul > li > a{
+	display: block;
+	padding: 1em 1.5em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #666;
+}
+
+#header-menu ul > li > a:hover,
+#header-user-menu ul > li > a:hover{
+	background: #EEE;
+}
+
+#header-user-menu{
+	padding: 0 2em;
+	background: #EEE;
+	font-size: 0.9em;
+}
+
+#header-user-menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#header-user-menu ul > li > a{
+	padding: 0.3em 0.6em;
+}
+
+#header-user-menu ul > li > a::before{
+	content: '>';
+	color: #AAA;
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+#header-user-menu ul > li > a[href*="doodle.com"]::before,
+#header-user-menu ul > li > a[href*="www.youtube.com"]::before{
+	content: '';
+	width: 16px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin-top: -2px;
+	margin-bottom: -6px;
+}
+
+#header-user-menu ul > li > a[href*="doodle.com"]::before{
+	background-image: url(../img/doodle.png);
+}
+
+#header-user-menu ul > li > a[href*="youtube.com"]::before{
+	background-image: url(../img/youtube.png);
+}
+
+#header-user-menu ul > li > a:hover{
+	text-decoration: underline;
+}
+
+#footer{
+	border-top: 2px solid #EEE;
+	padding: 20px;
+	text-align: center;
+	font-size: 0.9em;
+	color: #888;
+}
+
+#page-content,
+#page-sidebar,
+#ccm-profile-wrapper #ccm-profile-sidebar,
+#ccm-profile-wrapper #ccm-profile-body{
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+}
+
+#page-content,
+#ccm-profile-wrapper #ccm-profile-body{
+	width: 80%;
+}
+
+#page-sidebar,
+#ccm-profile-wrapper #ccm-profile-sidebar{
+	width: 20%;
+	border-right: 2px solid #EEE;
+}
+
+#page-content + #page-sidebar{
+	border: none;
+	border-left: 2px solid #EEE;
+}
+
+#page-sidebar #ccm-profile-sidebar{
+	width: auto;
+}
+
+#page-content h1,
+#page-content h2,
+#page-content h4.guestBook-title{
+	font-family: 'Londrina Solid', cursive;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+}
+
+#page-content h1{
+	color: #1F9600;
+	margin-top: 0;
+}
+
+#page-content h2{
+	
+}
+
+#page-content a{
+	color: #888;
+	text-decoration: underline;
+}
+
+/* À coup sûr un lien de téléchargement */
+#page-content > a{
+	display: block;
+	color: #333;
+}
+
+#page-content > a::before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url(../img/download.png) no-repeat;
+	margin: 0.3em 1em 0.3em 0.5em;
+}
+
+/* Les liens vides intégrés dans les zones de
+commentaires ne doivent pas être visibles */
+#page-content > a[name],
+#page-content > a[name]::before{
+	display: none;
+}
+
+#page-content .entry{
+	border-top: 2px solid #EEE;
+	padding: 0 20px;
+	margin-bottom: 50px;
+}
+
+#page-content .entry h3,
+#page-content .post-title{
+	display: inline-block;
+	color: #1F9600;
+}
+
+#page-content .entry h3{
+	font-size: 1.6em;
+	margin: 0.5em 0;
+}
+
+#page-content .entry h3 a{
+	color: inherit;
+	text-decoration: none;
+}
+
+#page-content .entry h4,
+#page-content .post-date{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 0.9em;
+	color: #888;
+	margin-left: 1em;
+}
+
+#page-content .ccm-tags-display h4{
+	display: inline-block;
+	margin: 0;
+}
+
+#page-content .ccm-tags-display h4::after{
+	content: ':';
+	margin-right: 1em;
+}
+
+#page-content .ccm-tags-display ul{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#page-content .ccm-tags-display ul li{
+	display: inline-block;
+	margin: 0 0.3em;
+	padding: 0.4em 0.6em;
+	background: #DDD;
+	color: #333;
+	float: none;
+	line-height: normal;
+	height: auto;
+}
+
+#page-content hr{
+	display: none;
+}
+
+#page-content .entry .meta{
+	color: #888;
+}
+
+#page-content .entry .meta a{
+	color: inherit;
+}
+
+#page-content input,
+#page-content textarea{
+	font-family: inherit;
+	font-size: inherit;
+}
+
+#page-content h4.guestBook-title{
+	border: none;
+	background: url(../img/chat.png) no-repeat left top;
+	min-height: 60px;
+	color: #1F9600;
+	font-size: 1.5em;
+	padding: 0.5em 70px;
+	margin-bottom: 0.5em;
+	margin-top: 2em;
+}
+
+#page-content .guestBook-formBlock,
+#page-content .guestBook-entry{
+	background: #EFEFEF;
+	padding: 20px;
+	margin: 10px;
+}
+
+#page-content .guestBook-entry .contentByLine{
+	font-size: 1em;
+	color: #AAA;
+	margin-bottom: 0.5em;
+}
+
+#page-content .guestBook-entry .contentByLine .userName{
+	font-weight: bold;
+	color: #666;
+}
+
+#page-content .guestBook-formBlock h5{
+	font-size: 1.2em;
+	margin: 0.2em;
+}
+
+#page-content .guestBook-formBlock br{
+	display: none;
+}
+
+.ccm-profile-member-list{
+	
+}
+
+#page-content .ccm-profile-member{
+	width: 400px;
+	max-width: 100%;
+	margin: 0 auto;
+	border: none;
+}
+
+#page-content .ccm-profile-member > a{
+	display: block;
+	color: #333;
+	text-decoration: none;
+	background: #EFEFEF;
+	padding: 10px;
+}
+
+#page-content .ccm-profile-member > a:hover{
+	background: #DDD;
+}
+
+#page-content .ccm-profile-member .avatar,
+#page-content .ccm-profile-member .profile{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#page-content .ccm-profile-member .profile .name{
+	font-size: 1.5em;
+}
+
+#page-content .form-search-members{
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#page-content .form-search-members input[type=text],
+#page-content .form-search-members input[type=submit]{
+	padding: 0.3em 0.5em;
+}
+
+#page-content .form-search-members input[type=text]{
+	width: 40em;
+	max-width: 100%;
+}
+
+#page-content .form-search-members input[type=submit]{
+	min-width: 6em;
+}
+
+#page-content .ccm-pagination{
+	
+}
+
+#page-content .ccm-pagination ul{
+	list-style: none;
+	padding: 0;
+}
+
+#page-content .ccm-pagination ul li{
+	display: inline-block;
+	margin: 0 0.2em;
+}
+
+#page-content .ccm-pagination ul li a{
+	text-decoration: none;
+	padding: 0.4em 0.6em;
+	background: #DDD;
+	color: #333;
+	cursor: pointer;
+	border: none;
+}
+
+#page-content .ccm-pagination ul li a:hover,
+#page-content .ccm-pagination ul li.active a{
+	background: #AAA;
+}
+
+div#ccm-profile-sidebar{
+	margin: 0;
+}
+
+#ccm-profile-sidebar .nav li{
+	margin: 0.2em 0;
+}
+
+#ccm-profile-sidebar .nav li a{
+	display: block;
+	text-decoration: none;
+	padding: 0.4em 0.6em;
+	background: #DDD;
+	color: #333;
+	cursor: pointer;
+	border: none;
+}
+
+#ccm-profile-sidebar .nav li a:hover{
+	background: #AAA;
+}
+
+.ccm-profile-body-item div{
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 0.1em 0;
+}
+
+.ccm-profile-body-item div label{
+	display: inline-block;
+	min-width: 6em;
+	color: #888;
+}
