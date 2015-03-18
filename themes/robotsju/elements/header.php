@@ -7,6 +7,7 @@
 	
 	<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo $this->getThemePath()?>/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<!--[if lte IE 8]>
@@ -28,7 +29,6 @@
 						$ah->display($c);
 					?>
 				</div>
-				<div class="inlay"></div>
 				<div class="login">
 					<?php
 						$ah = new GlobalArea('Login Box');
@@ -36,19 +36,29 @@
 					?>
 				</div>
 			</div>
-			<div id="header-menu">
-				<?php
-					$ah = new GlobalArea('Header Nav');
-					$ah->display($c);
-				?>
+			<div class="menu-toggle-button js-menu-toggle-button"><span class="text">Menu</span></div>
+			<div class="menu-toggle-group js-menu-toggle-group">
+				<div id="header-menu">
+					<?php
+						$ah = new GlobalArea('Header Nav');
+						$ah->display($c);
+					?>
+				</div>
+				<?php $u = new User();
+				if ($u->isRegistered()) { ?>
+				<div id="header-user-menu">
+					<?php
+						$ah = new GlobalArea('Header User Nav');
+						$ah->display($c);
+					?>
+				</div>
+				<?php } ?>
 			</div>
-			<?php $u = new User();
-			if ($u->isRegistered()) { ?>
-			<div id="header-user-menu">
-				<?php
-					$ah = new GlobalArea('Header User Nav');
-					$ah->display($c);
-				?>
-			</div>
-			<?php } ?>
+			<script type="text/javascript">
+				$('.js-menu-toggle-group').addClass('js-enabled');
+
+				$('.js-menu-toggle-button').click(function() {
+					$('.js-menu-toggle-group').toggleClass('visible');
+				});
+			</script>
 		</div>
