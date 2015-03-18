@@ -18,6 +18,10 @@
 ## Thèmes Concrete 5.6
 !/themes/
 
+## Projet NetBeans
+!/nbproject/
+/nbproject/private/
+
 ## Les autres fichiers gitignore
 !.gitignore
 
