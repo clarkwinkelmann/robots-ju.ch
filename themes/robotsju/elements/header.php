@@ -5,7 +5,7 @@
 		Loader::element('header_required');
 	?>
 	
-	<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo $this->getThemePath()?>/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

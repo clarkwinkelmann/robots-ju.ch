@@ -3,7 +3,7 @@
 /**
  * Paramètres de base de donnée
  */
-require('database.php');
+require('env.php');
 
 /**
  * Titre de la page [Site - Page]
