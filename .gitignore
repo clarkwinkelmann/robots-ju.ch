@@ -9,6 +9,9 @@
 
 # Éléments à conserver
 
+# Blocs personnalisés
+!/blocks/
+
 # Configuration Concrete 5.6
 !/config/
 

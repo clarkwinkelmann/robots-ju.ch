@@ -6,6 +6,7 @@
 		?>
 	</div>
 </div>
+<script src="<?php echo $this->getThemePath()?>/js/our-activities-banner.js"></script>
 <?php
 	Loader::element('footer_required');
 ?>

@@ -35,6 +35,10 @@
 						$ah->display($c);
 					?>
 				</div>
+				<?php
+					$ah = new GlobalArea('Header Raw');
+					$ah->display($c);
+				?>
 			</div>
 			<div class="menu-toggle-button js-menu-toggle-button"><span class="text">Menu</span></div>
 			<div class="menu-toggle-group js-menu-toggle-group">
