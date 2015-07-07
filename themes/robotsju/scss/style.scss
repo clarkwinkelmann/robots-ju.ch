@@ -5,6 +5,7 @@
 
 $theme-color-main: #1F9600;
 $theme-color-light: white;
+$thement-color-lightgray: #EEE;
 
 $site-max-width: 1200px;
 $site-mobile-width: 800px;
@@ -156,7 +157,7 @@ body {
 		margin: 0;
 		padding: 0;
 		
-		& > li {
+		li {
 			display: inline-block;
 			vertical-align: top;
 			margin: 0;
@@ -165,7 +166,7 @@ body {
 				display: block;
 			}
 			
-			& > a {
+			a {
 				display: block;
 				padding: 1em 1.5em;
 				text-decoration: none;
@@ -173,8 +174,31 @@ body {
 				color: #666;
 				
 				&:hover {
-					background: #EEE;
+					background: $thement-color-lightgray;
 				}
+			}
+
+			ul {
+				position: absolute;
+				display: none;
+				background: $theme-color-light;
+				box-shadow: 0 0 2px rgba(black, 0.2);
+
+				@media (max-width: $site-mobile-width) {
+					position: static;
+					display: block;
+					box-shadow: none;
+					border-left: 5px solid $thement-color-lightgray;
+					margin-left: 1.3em;
+				}
+
+				li {
+					display: block;
+				}
+			}
+
+			&:hover ul {
+				display: block;
 			}
 		}
 	}
@@ -182,15 +206,15 @@ body {
 
 // Menu commun
 #header-menu{
-	border-top: 2px solid #EEE;
-	border-bottom: 2px solid #EEE;
+	border-top: 2px solid $thement-color-lightgray;
+	border-bottom: 2px solid $thement-color-lightgray;
 	padding: 0 20px;
 }
 
 // Menu pour utilisateur connecté
 #header-user-menu {
 	padding: 0 2em;
-	background: #EEE;
+	background: $thement-color-lightgray;
 	font-size: 0.9em;
 
 	ul {
@@ -273,7 +297,7 @@ body {
 
 // Pied de page
 #footer {
-	border-top: 2px solid #EEE;
+	border-top: 2px solid $thement-color-lightgray;
 	padding: 20px;
 	text-align: center;
 	font-size: 0.9em;
@@ -305,7 +329,7 @@ body {
 #page-sidebar,
 #ccm-profile-wrapper #ccm-profile-sidebar {
 	width: 20%;
-	border-right: 2px solid #EEE;
+	border-right: 2px solid $thement-color-lightgray;
 
 	@media (max-width: $site-mobile-width) {
 		width: auto;
@@ -321,7 +345,7 @@ body {
 
 #page-content + #page-sidebar {
 	border: none;
-	border-left: 2px solid #EEE;
+	border-left: 2px solid $thement-color-lightgray;
 }
 
 #page-sidebar #ccm-profile-sidebar {
@@ -380,7 +404,7 @@ body {
 	}
 
 	.entry {
-		border-top: 2px solid #EEE;
+		border-top: 2px solid $thement-color-lightgray;
 		padding: 0 20px;
 		margin-bottom: 50px;
 
