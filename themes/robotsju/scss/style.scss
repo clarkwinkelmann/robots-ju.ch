@@ -6,6 +6,7 @@
 $theme-color-main: #1F9600;
 $theme-color-light: white;
 $theme-color-lightgray: #EEE;
+$theme-color-darkgray: #666;
 
 $activities-banner-color: tomato;
 
@@ -115,7 +116,7 @@ body {
 				text-decoration: none;
 
 				&:hover {
-					color: #666;
+					color: $theme-color-darkgray;
 				}
 			}
 		}
@@ -221,7 +222,7 @@ body {
 				padding: 1em 1.5em;
 				text-decoration: none;
 				font-weight: bold;
-				color: #666;
+				color: $theme-color-darkgray;
 				
 				&:hover {
 					background: $theme-color-lightgray;
@@ -554,7 +555,7 @@ body {
 
 		.userName {
 			font-weight: bold;
-			color: #666;
+			color: $theme-color-darkgray;
 		}
 	}
 
@@ -701,5 +702,19 @@ div#ccm-profile-sidebar { // div pour être aussi fort que le style concrete
 		tr:nth-child(even) {
 			background: rgba(black, 0.05);
 		}
+	}
+}
+
+.sponsoring-badge {
+	display: block;
+	border: 3px dashed $theme-color-darkgray;
+	color: $theme-color-darkgray;
+	text-align: center;
+	text-decoration: none;
+	margin: 30px 0;
+
+	&:hover {
+		color: $theme-color-main;
+		border-color: $theme-color-main;
 	}
 }
