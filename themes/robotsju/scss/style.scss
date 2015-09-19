@@ -8,7 +8,7 @@ $theme-color-light: white;
 $theme-color-lightgray: #EEE;
 $theme-color-darkgray: #666;
 
-$activities-banner-color: tomato;
+$activities-banner-color: $theme-color-main;
 
 $font-fancy: 'Londrina Solid', cursive;
 
@@ -187,9 +187,9 @@ body {
 				position: absolute;
 				bottom: 0;
 				text-align: center;
-				padding: 0.1em;
+				padding: 0.05em;
 				font-weight: bold;
-				font-size: 0.9em;
+				font-size: 0.85em;
 				box-shadow: 0 0 2px rgba(black, 0.2);
 			}
 		}
@@ -214,7 +214,7 @@ body {
 			}
 
 			&.our-activities-banner-item {
-				background: rgba($activities-banner-color, 0.05);
+				background: rgba($activities-banner-color, 0.06);
 			}
 			
 			a {
