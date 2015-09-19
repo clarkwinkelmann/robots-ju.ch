@@ -15,14 +15,14 @@ if ($u->isRegistered() && $hideFormUponLogin) { ?>
 	?>
 	<div class="sign-in"><?php echo t('Currently logged in as <b>%s</b>.', $userName)?> <a class="logout-btn" href="<?php  echo $this->url('/login', 'logout')?>"><?php echo t('Sign Out')?></a></div>
 <?php   } else { ?>
-	<form class="login_block_form" method="post" action="<?php   echo $loginURL?>">
+	<form class="login_block_form" method="post" action="<?= $loginURL ?>">
 		<?php
 			if($returnToSamePage ) {
 				echo $form->hidden('rcID',$c->getCollectionID());
 			}
 		?>
 
-		<div class="loginTitle">Accès membres</div>
+		<div class="loginTitle"><a href="<?= $this->url('/login') ?>">Accès membres</a></div>
 
 		<div class="uNameWrap form-group">
 			<?php

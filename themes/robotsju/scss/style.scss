@@ -154,6 +154,11 @@ body {
 				color: $theme-color-main;
 				font-family: $font-fancy;
 				text-align: center;
+
+				a {
+					color: inherit;
+					text-decoration: none;
+				}
 			}
 
 			input[type=text],
